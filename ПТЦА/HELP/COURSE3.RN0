@@ -1,0 +1,24 @@
+ 
+HOMEP Rg1 Rg2 Rg3 Rg4 Rg5 Rg6 Rg7 Rg8 Rg9Rg10Rg11Rg12Rg13Rg14|x0x1x2x3
+   10  ff  00  00  00  00  00  00  00  00  00  00  00  00  00| 0 0 0 1
+   20  ff  fc  00  00  00  00  00  00  00  00  00  00  00  00| 0 0 0 1
+   30  ff  fc  ff  00  00  00  00  00  00  00  00  00  00  00| 0 0 0 1
+   40  ff  fc  ff  f9  00  00  00  00  00  00  00  00  00  00| 0 0 0 1
+   50  ff  fc  ff  f9  00  00  00  00  00  00  00  00  00  fc| 0 0 1 0
+   60  ff  fc  ff  f9  00  00  00  00  00  00  00  00  fc  fc| 0 0 1 0
+   70  ff  fc  ff  f9  00  00  00  00  00  00  00  00  fc  f5| 0 1 1 0
+   80  ff  fc  ff  f9  00  00  00  00  00  00  00  00  fc  f5| 0 1 1 0
+  150  ff  fc  ff  f9  00  f5  00  00  00  00  00  00  f5  f5| 0 1 1 0
+  160  ff  fc  ff  f9  00  f5  00  00  00  00  00  00  f5  ff| 0 0 1 0
+  170  ff  fc  ff  f9  00  f5  00  00  00  00  00  00  ff  ff| 0 0 1 0
+  180  ff  fc  ff  f9  00  f5  00  00  00  00  00  00  ff  ff| 0 1 1 0
+  190  ff  fc  ff  f9  00  f5  00  00  00  00  00  00  ff  ff| 0 1 1 0
+  220  ff  fc  ff  f9  00  f5  00  00  00  00  00  00  ff  ff| 0 1 1 0
+  230  ff  fc  ff  f9  ff  f5  00  00  00  00  00  00  ff  ff| 0 1 1 0
+  240  ff  fc  ff  f9  ff  f5  00  00  00  00  00  00  ff  ff| 0 1 1 0
+  250  ff  fc  ff  f9  ff  f5  00  00  00  00  00  00  ff  f6| 0 0 1 0
+  260  ff  fc  ff  f9  ff  f6  00  00  00  00  00  00  f6  f6| 0 0 1 0
+  270  ff  fc  ff  f9  ff  f6  00  00  00  00  00  00  f6  f6| 0 0 1 0
+  350 
+*** The end ***
+  Rg1=ff  Rg2=fc  Rg3=ff  Rg4=f9  Rg5=ff  Rg6=f6  Rg7=0  Rg8=0  Rg9=0  Rg10=0  Rg11=0  Rg12=0  Rg13=f6  Rg14=f6.
