@@ -4,8 +4,8 @@
 #include "stdlib.h"
 char *mem;
 int h[256];
-long reg[8],sreg[4],sregc,flag;
-int com,i,j,p,e,ee;
+long reg[8],sreg[4],sregc,flag,wlpp,wlpp1;
+int com,i,j,p,e,ee,kgg;
 int flags[8];
 char *fnm,*null=NULL;
 FILE *file1,*file2;
@@ -64,29 +64,41 @@ int parity(int fzz) {
 	return(p);}
 void inc(int ww){
   if(!ww)reg[com&0x7]++;
-  else if((*(mem+ip+1))>>6==3){
-	 if((reg[*(mem+ip+1)&7]++)&0x10000){flags[0]=1;
+  else if((*(mem+ip+1))>>6==3)
+	 if(com&1){ if((reg[*(mem+ip+1)&7]++)&0x10000){flags[0]=1;
 		   reg[*(mem+ip+1)&7]&=0xffff;}
+	   else flags[0]=0;
+	   if(reg[*(mem+ip+1)&7]==0)flags[1]=1;
+	   else flags[1]=0;
+	   flags[2]=reg[*(mem+ip+1)&7];}
+	else {if((reg[(*(mem+ip+1)&7)>>1]+=((*(mem+ip+1)&1)<<8))&0x100){flags[0]=1;
+		   reg[(*(mem+ip+1)&7)>>1]--;}
 	 else flags[0]=0;
 	 if(reg[*(mem+ip+1)&7]==0)flags[1]=1;
 	 else flags[1]=0;
 	 flags[2]=reg[*(mem+ip+1)&7];}
-       else if(((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))++)&0x10000){flags[0]=1;
+      else if(((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))++)&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=*(mem+rm((*(mem+ip+1)&0xc0)>>6,1));}
 void dec(int ww){
-  if(!ww) reg[com&7]--;
-  else if((*(mem+ip+1)>>6)==3){
-	 if((reg[*(mem+ip+1)&7]--)&0x10000){flags[0]=1;
+  if(!ww)reg[com&0x7]--;
+  else if((*(mem+ip+1))>>6==3)
+	 if(com&1){ if((reg[*(mem+ip+1)&7]--)&0x10000){flags[0]=1;
 		   reg[*(mem+ip+1)&7]&=0xffff;}
+	   else flags[0]=0;
+	   if(reg[*(mem+ip+1)&7]==0)flags[1]=1;
+	   else flags[1]=0;
+	   flags[2]=reg[*(mem+ip+1)&7];}
+	else {if((reg[(*(mem+ip+1)&7)>>1]-=((*(mem+ip+1)&1)<<8))&0x100){flags[0]=1;
+		   reg[(*(mem+ip+1)&7)>>1]++;}
 	 else flags[0]=0;
 	 if(reg[*(mem+ip+1)&7]==0)flags[1]=1;
 	 else flags[1]=0;
 	 flags[2]=reg[*(mem+ip+1)&7];}
-       else if(((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))--)&0x10000){flags[0]=1;
+      else if(((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))--)&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
@@ -96,26 +108,26 @@ void add(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]+=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]+=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]+=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]+=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8)))&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=reg[((*(mem+ip+1)&0x38)>>3)])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8)))&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -143,26 +155,26 @@ void or(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]|=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]|=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]|=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]|=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8)))&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))|=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))|=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))|=reg[((*(mem+ip+1)&0x38)>>3)])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))|=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8)))&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -190,26 +202,26 @@ void adc(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]+=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1))+flags[0])&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]+=(*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))+flags[0])&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]+=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+flags[0])&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]+=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8))+flags[0])&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=(reg[((*(mem+ip+1)&0x3c)>>3)])+flags[0])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=(reg[((*(mem+ip+1)&0x38)>>3)])+flags[0])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8))+flags[0])&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -227,7 +239,7 @@ void adc(int ww){
 	 if(reg[*(mem+ip+1)&7]==0)flags[1]=1;
 	 else flags[1]=0;
 	 flags[2]=reg[*(mem+ip+1)&7];}
-       else if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=((*(mem+ip+2)+*(mem+ip+3)<<8))+flags[0])&0x10000){flags[0]=1;
+       else if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+=(*(mem+ip+2)+*(mem+ip+3)<<8)+flags[0])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
@@ -237,26 +249,26 @@ void sbb(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]-=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1))+flags[0])&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]-=(*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))+flags[0])&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]-=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))+flags[0])&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]-=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8))+flags[0])&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=(reg[((*(mem+ip+1)&0x3c)>>3)])+flags[0])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=(reg[((*(mem+ip+1)&0x38)>>3)])+flags[0])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8))+flags[0])&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -274,36 +286,37 @@ void sbb(int ww){
 	 if(reg[*(mem+ip+1)&7]==0)flags[1]=1;
 	 else flags[1]=0;
 	 flags[2]=reg[*(mem+ip+1)&7];}
-       else if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=((*(mem+ip+2)+*(mem+ip+3)<<8))+flags[0])&0x10000){flags[0]=1;
+       else if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=(*(mem+ip+2)+*(mem+ip+3)<<8)+flags[0])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=*(mem+rm((*(mem+ip+1)&0xc0)>>6,1));}}
+
 void and(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]&=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]&=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]&=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]&=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8)))&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=reg[((*(mem+ip+1)&0x38)>>3)])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8)))&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -331,26 +344,26 @@ void sub(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]-=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]-=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]-=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]-=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8)))&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=reg[((*(mem+ip+1)&0x38)>>3)])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))-=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8)))&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -378,26 +391,26 @@ void xor(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]^=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]^=*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1)))&0x10000){flags[0]=1;
 		    reg[((*(mem+ip+1)&0x3c)>>3)]&=0xffff;}
 		  else flags[0]=0;
 		  if(reg[((*(mem+ip+1)&0x3c)>>3)]==0)flags[1]=1;
 		  else flags[1]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]^=(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))&0x10000){flags[0]=1;
-		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xffff;}
+	else{if((reg[((*(mem+ip+1)&0x38)>>3)]^=(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1)))+(*(mem+kgg+1)<<8)))&0x100){flags[0]=1;
+		    reg[((*(mem+ip+1)&0x38)>>3)]&=0xff;}
 	     else flags[0]=0;
 	     if(reg[((*(mem+ip+1)&0x38)>>3)]==0)flags[1]=1;
 	     else flags[1]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
-      else{if(com&2){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))^=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
+      else{if(com&1){if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))^=reg[((*(mem+ip+1)&0x3c)>>3)])&0x10000){flags[0]=1;
 		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
 	    else flags[0]=0;
 	    if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 	    else flags[1]=0;
 	    flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}
-	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))^=reg[((*(mem+ip+1)&0x38)>>3)])&0x10000){flags[0]=1;
-		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xffff;}
+	   else{if((*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))^=(reg[((*(mem+ip+1)&0x38)>>3)>>1]>>(((*(mem+ip+1))&1)<<8)))&0x100){flags[0]=1;
+		    *(mem+rm((*(mem+ip+1)&0xc0)>>6,1))&=0xff;}
 		else flags[0]=0;
 		if(*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0)flags[1]=1;
 		else flags[1]=0;
@@ -425,11 +438,11 @@ void cmp(int ww){
   if(!ww){
     if(com&7<4)
       if(com&2){
-	if(com&1){if((reg[((*(mem+ip+1)&0x3c)>>3)]==*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1))))flags[1]=1;
+	if(com&1){if((reg[((*(mem+ip+1)&0x38)>>3)]==*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1))))flags[1]=1;
 		  else flags[1]=0;
 		  flags[0]=0;
 		  flags[2]=parity(reg[((*(mem+ip+1)&0x3c)>>3)]);}
-	else{if(reg[((*(mem+ip+1)&0x38)>>3)]==*(mem+rm((*(mem+ip+1)&0xc0)>>6,1)))flags[1]=1;
+	else{if(reg[((*(mem+ip+1)&0x38)>>3)]==(*(mem+(kgg=rm((*(mem+ip+1)&0xc0)>>6,1))+(*(mem+kgg+1)<<8))))flags[1]=1;
 	     else flags[1]=0;
 	     flags[0]=0;
 	     flags[2]=parity(reg[((*(mem+ip+1)&0x38)>>3)]);}}
@@ -474,11 +487,16 @@ void arithm(){
     if(com<0x36) xor(0);
     else cmp(0);}
 void nop(){}
-void test(){
-    if(com&1){if(reg[((*(mem+ip+1)&0x3c)>>3)]&*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1))==0)flags[1]=1;
-		else flags[1]=0;}
-      else{if(reg[((*(mem+ip+1)&0x38)>>3)]&*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0) flags[1]=1;
-	   else flags[1]=0;}}
+void test(int ww){
+    if(!ww) if(com&1){if(reg[((*(mem+ip+1)&0x3c)>>3)]&*(mem+rm(((*(mem+ip+1)&0xc0)>>6),1))==0)flags[1]=1;
+		   else flags[1]=0;}
+            else{if(reg[((*(mem+ip+1)&0x38)>>3)]&*(mem+rm((*(mem+ip+1)&0xc0)>>6,1))==0) flags[1]=1;
+	        else flags[1]=0;}
+    else if(com&1){if(*(mem+rm(*(mem+ip+1)>>3,1))&(*(mem+ip+2)+(*(mem+ip+3)<<8))==0)flags[1]=1;
+		   else flags[1]=0;}
+	    else{if(*(mem+rm(*(mem+ip+1)>>3,0))&*(mem+ip+2)==0) flags[1]=1;
+	        else flags[1]=0;}
+   flags[0]=0;}
 void callf(){
   reg[4]-=2;
   *(mem+reg[4])=sreg[1];
@@ -529,21 +547,31 @@ void loop(){
 	       if(reg[1]||!flags[1])ip+=*(mem+ip+1);}
     case 0xe2:{reg[1]--;
 	      if(reg[1]||flags[1])ip+=*(mem+ip+1);}}}
-void shrr(int co,int w){
-  switch((*(mem+ip+1)>>3)&7){
-     case 0:{if(
-	     *(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))<<1;}
-     case 1:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))>>1;}
-     case 2:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))<<1;}
-     case 3:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))>>1;}
-     case 4:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))<<1;}
-     case 5:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))>>1;}
-     case 6:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))<<1;}
-     case 7:{*(mem+rm(*(mem+ip+1)>>6,w))=*(mem+rm(*(mem+ip+1)>>6,w))>>1;}
-void shift(int ww){
-  if(!ww){
-     shrr(1,!(com&1));
-  else shrr(reg[1]&0xff,!(com&1));}}
+void not(){
+  if(com&1) *(mem+rm(*(mem+ip+1)>>6,1))^=0xffff;
+  else *(mem+rm(*(mem+ip+1)>>6,0))^=0xff;}
+void neg(){
+  if(com&1) *(mem+rm(*(mem+ip+1)>>6,1))-=0x10000;
+  else *(mem+rm(*(mem+ip+1)>>6,0))-=0x100;}
+void mul(){
+  if(!com&1) reg[0]=((reg[0]&0xff)*(*(mem+rm(*(mem+ip+1)>>6,0))));
+  else {wlpp=((reg[0])*(*(mem+rm(*(mem+ip+1)>>6,1))));
+        reg[0]=wlpp&0xffff;
+        reg[2]=wlpp>>16;}}
+void div(){
+  if(!com&1) {wlpp=((reg[0]&0xff)/(*(mem+rm(*(mem+ip+1)>>6,0))));
+	      wlpp1=((reg[0]&0xff)%(*(mem+rm(*(mem+ip+1)>>6,0))));
+	      reg[0]=wlpp+wlpp1<<8;}
+  else {wlpp=((reg[0]&0xff)/(*(mem+rm(*(mem+ip+1)>>6,0))));
+	      reg[2]=((reg[0]&0xff)%(*(mem+rm(*(mem+ip+1)>>6,0))));
+              reg[0]=wlpp;}}
+void mull(){
+  switch ((*(mem+ip+1)>>3)&7){
+    case 0:test(1);
+    case 2:not();
+    case 3:neg();
+    case 4:mul();
+    case 5:div();}}
 void call(int ww){
   if(!ww){
   reg[4]-=2;
@@ -586,7 +614,7 @@ void execute_command(){
     if(com<0x50) dec(0);
     if(com<0x80) jcc();
     if(com<0x84) arithm1();
-    if(com<0x86) test();
+    if(com<0x86) test(0);
     if(com<0x9a) callf();
     if(com<0xae) testa();
     if(com<0xca) ret();
@@ -595,7 +623,8 @@ void execute_command(){
     if(com==0xcf) iret();
     if(com<0xe8) loop();
     if(com<0xe8) call(0);
-    if(com<0xe8) jmp(0);
+    if(com<0xf6) jmp(0);
+    if(com<0xfe) mull();
     else jmpmp();
     ip+=h[com];
     sregc=3;}
