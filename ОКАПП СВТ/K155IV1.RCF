@@ -1,0 +1,12 @@
+I_UserName k155iv1
+I_InPCBfile k155iv1.plq
+I_OutPCBfile k155iv1.plo
+I_CTLfile k155iv1.ctl
+I_RTEfile k155iv1.rte
+I_RTSfile k155iv1.rts
+I_PRBfile k155iv1.prb
+I_REPfile k155iv1.rep
+I_DoExtract No
+I_DoRoute restart
+I_RunFlag Yes
+I_DoReturn No

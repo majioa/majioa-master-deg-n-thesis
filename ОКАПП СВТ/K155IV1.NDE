@@ -1,0 +1,174 @@
+
+
+%*********************************************************************
+%                                                                    *
+%     Program  :   PC-FORM VERSION 8.5                               *
+%     Date     :   Nov 23 1997                                       *
+%     Time     :   08:05:57 PM                                       *
+%     File In  :   k155iv1.nlt                                       *
+%     File Out :   k155iv1.nde                                       *
+%     Format   :   P-CAD NODE LIST                                   *
+%                                                                    *
+%*********************************************************************
+
+
+%
+% NODE      PINS                      COMPONENT               PATHNAME
+% ----      ----                      ---------               --------
+%
+
+  UN000061                                                    <k155iv1
+            OUT                       155ln1:UC000039
+            INB                       155li1:UC000016
+            INB                       155li1:UC000017
+            INB                       155li1:UC000018
+            INB                       155li1:UC000019
+            IND                       555li6:UC000022
+            IND                       555li6:UC000023
+            IND                       555li6:UC000026
+            INC                       555li3:UC000024
+            INE                       155li50:UC000055
+
+  I8                                                          <k155iv1
+            OUT                       155ln1:UC000036
+            INA                       155li1:UC000016
+
+  T2                                                          <k155iv1
+            INB                       155ll50:UC000054
+            OUTY                      155la1:UC000040
+            INB                       155le1:UC000037
+
+  T1                                                          <k155iv1
+            INA                       155ll50:UC000054
+            OUTY                      155la1:UC000012
+            INA                       155le1:UC000037
+
+  T3                                                          <k155iv1
+            OUTY                      155le1:UC000037
+            INA                       155ll1:UC000038
+
+  I7                                                          <k155iv1
+            OUT                       155ln1:UC000035
+            INA                       155li1:UC000017
+
+  I7'                                                         <k155iv1
+            INC                       155la1:UC000040
+            IN                        155ln1:UC000035
+            INC                       555li6:UC000026
+            INB                       555li3:UC000024
+            IND                       155li50:UC000055
+
+  I8'                                                         <k155iv1
+            IND                       155la1:UC000040
+            IN                        155ln1:UC000036
+
+  EI'                                                         <k155iv1
+            INC                       155ll50:UC000054
+            IN                        155ln1:UC000039
+            INB                       155ll1:UC000038
+
+  I6'                                                         <k155iv1
+            INB                       155la1:UC000040
+            IN                        155ln1:UC000034
+            INC                       555li6:UC000022
+            INC                       555li6:UC000023
+
+  I5'                                                         <k155iv1
+            INA                       155la1:UC000040
+            IN                        155ln1:UC000033
+            INA                       555li6:UC000022
+            INB                       555li6:UC000023
+            INB                       555li6:UC000026
+            INB                       155li50:UC000055
+
+  I4'                                                         <k155iv1
+            IND                       155la1:UC000012
+            IN                        155ln1:UC000032
+
+  I3'                                                         <k155iv1
+            INC                       155la1:UC000012
+            IN                        155ln1:UC000031
+            INC                       155li50:UC000055
+
+  I2'                                                         <k155iv1
+            INB                       155la1:UC000012
+            IN                        155ln1:UC000030
+
+  I1'                                                         <k155iv1
+            INA                       155la1:UC000012
+
+  I6                                                          <k155iv1
+            OUT                       155ln1:UC000034
+            INA                       155li1:UC000018
+            INA                       555li3:UC000024
+
+  I5                                                          <k155iv1
+            OUT                       155ln1:UC000033
+            INA                       155li1:UC000019
+
+  I4                                                          <k155iv1
+            OUT                       155ln1:UC000032
+            INB                       555li6:UC000022
+            INA                       555li6:UC000026
+
+  I3                                                          <k155iv1
+            OUT                       155ln1:UC000031
+            INA                       555li6:UC000023
+
+  I2                                                          <k155iv1
+            OUT                       155ln1:UC000030
+            INA                       155li50:UC000055
+
+  GS'                                                         <k155iv1
+            OUTY                      155ll1:UC000038
+
+  T5                                                          <k155iv1
+            OUTY                      555li6:UC000026
+            INB                       155le50:UC000056
+
+  T6                                                          <k155iv1
+            OUTY                      555li3:UC000024
+            INC                       155le50:UC000056
+
+  T7                                                          <k155iv1
+            OUTY                      555li6:UC000023
+            INA                       155le50:UC000057
+
+  T8                                                          <k155iv1
+            OUTY                      555li6:UC000022
+            INB                       155le50:UC000057
+
+  T10                                                         <k155iv1
+            OUTY                      155li1:UC000018
+            INB                       155le50:UC000058
+
+  T4                                                          <k155iv1
+            OUT                       155li50:UC000055
+            INA                       155le50:UC000056
+
+  A0'                                                         <k155iv1
+            OUT                       155le50:UC000056
+
+  A1'                                                         <k155iv1
+            OUT                       155le50:UC000057
+
+  A2'                                                         <k155iv1
+            OUT                       155le50:UC000058
+
+  EO'                                                         <k155iv1
+            OUT                       155ll50:UC000054
+
+  T9                                                          <k155iv1
+            OUTY                      155li1:UC000019
+            INA                       155le50:UC000058
+
+  T11                                                         <k155iv1
+            OUTY                      155li1:UC000017
+            INC                       155le50:UC000058
+            INC                       155le50:UC000057
+
+  T12                                                         <k155iv1
+            OUTY                      155li1:UC000016
+            IND                       155le50:UC000058
+            IND                       155le50:UC000057
+            IND                       155le50:UC000056

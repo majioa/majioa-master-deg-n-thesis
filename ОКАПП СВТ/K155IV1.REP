@@ -1,0 +1,2284 @@
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/22/1997  17:05:12 
+Design:     
+Database:   k155iv1.plc
+Strategy:   pcad2.ctl
+
+FATAL     A170 Strategy file and database have different measurement units.
+
+Fatal Errors:            1                   Warnings:            0        
+Elapsed Time:      0:00:03 
+
+End Time:   11/22/1997  17:05:23 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/22/1997  17:14:17 
+Design:     
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+
+FATAL     A170 Strategy file and database have different measurement units.
+
+Fatal Errors:            1                   Warnings:            0        
+Elapsed Time:      0:00:03 
+
+End Time:   11/22/1997  17:14:24 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/22/1997  17:17:10 
+Design:     
+Database:   k155iv1.plc
+Strategy:   pavlo.ctl
+
+FATAL     A170 Strategy file and database have different measurement units.
+
+Fatal Errors:            1                   Warnings:            0        
+Elapsed Time:      0:00:03 
+
+End Time:   11/22/1997  17:17:15 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/27/1997  16:36:34 
+Design:     
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    76              Pins:   406
+
+Disk file space needed:  126.05 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 125.23 Mbytes
+                          and 4721 x 5521 grids x 2 layers)
+   Optimum setup: 1021.81 Mbytes
+      Good setup:  511.50 Mbytes
+      Fair setup:  225.38 Mbytes
+
+
+Elapsed Time:      0:00:04 
+
+End Time:   11/27/1997  16:36:39 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/27/1997  16:36:43 
+Design:      
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.0500 x 0.0500  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       LONG-SHORT        Route Distribution: ALL LAYERS
+Bevel During Route:        NO
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:       0   Initial Vias:      0     0.0%
+
+ 
+Map Builder  start: 16:36:45   0:00:14 elapsed            Size: 108.72 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       1     1  16:36:59   0:00:00      67       0     1.3%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       6     4  16:37:01   0:24:55     827       4     6.5%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    76              Pins:   406
+
+Routed Subnets:          5                  Disconnects:         71
+Completion Rate:       6.5%                 Disk Swaps:        1803     
+Node scouring:         174                  Node pruning:        17
+Total Metal:           827                  Elapsed Time:   0:25:30
+Total Vias:              4
+
+ 
+End Time:   11/27/1997  17:02:13 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/27/1997  17:05:56 
+Design:     
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    76              Pins:   406
+
+Disk file space needed:  126.05 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 125.23 Mbytes
+                          and 4721 x 5521 grids x 2 layers)
+   Optimum setup: 1021.81 Mbytes
+      Good setup:  511.50 Mbytes
+      Fair setup:  225.38 Mbytes
+
+
+Elapsed Time:      0:00:04 
+
+End Time:   11/27/1997  17:06:01 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/27/1997  17:06:04 
+Design:      
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.0500 x 0.0500  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       LONG-SHORT        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:       0   Initial Vias:      0     0.0%
+
+ 
+Map Builder  start: 17:06:07   0:00:13 elapsed            Size: 108.72 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       1     1  17:06:21   0:00:00      67       0     1.3%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      19     9  17:06:22   0:48:22    1424      10    13.1%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    76              Pins:   406
+
+Routed Subnets:         10                  Disconnects:         66
+Completion Rate:      13.1%                 Disk Swaps:        5896     
+Node scouring:         598                  Node pruning:        40
+Total Metal:          1424                  Elapsed Time:   0:48:53
+Total Vias:             10
+
+ 
+End Time:   11/27/1997  17:54:58 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/27/1997  17:55:10 
+Design:     
+Database:   k155iv1.pl1
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+UN000061. . . . . . . .  FROM          215     182.3400  D7
+                         TO       222.6200     189.9600  D7
+UN000061. . . . . . . .  FROM          215     142.3400  D8
+                         TO            215     182.3400  D7
+UN000061. . . . . . . .  FROM          175      69.9600  D12
+                         TO            215      61.3400  D10
+UN000061. . . . . . . .  FROM          135      22.3400  D6
+                         TO            135      29.9600  D6
+UN000061. . . . . . . .  FROM     142.6200      19.8000  D6
+                         TO            135      22.3400  D6
+UN000061. . . . . . . .  FROM     142.6200      27.4200  D6
+                         TO       142.6200      19.8000  D6
+UN000061. . . . . . . .  FROM     142.6200      64.8800  D9
+                         TO       142.6200      27.4200  D6
+UN000061. . . . . . . .  FROM          175      69.9600  D12
+                         TO       142.6200      64.8800  D9
+T2. . . . . . . . . . .  FROM          175     228.9600  D11
+                         TO            215     227.4200  D2
+T1. . . . . . . . . . .  FROM          175     231.5000  D11
+                         TO            215     229.9600  D2
+T3. . . . . . . . . . .  FROM     142.6200     229.9600  D5
+                         TO            215     232.5000  D2
+I7. . . . . . . . . . .  FROM     142.6200      97.2600  D13
+                         TO            135      24.8800  D6
+I7' . . . . . . . . . .  FROM          215      63.8800  D10
+                         TO       222.6200     187.4200  D7
+I7' . . . . . . . . . .  FROM     142.6200      62.3400  D9
+                         TO       142.6200      99.8000  D13
+I7' . . . . . . . . . .  FROM          215      63.8800  D10
+                         TO       142.6200      62.3400  D9
+I7' . . . . . . . . . .  FROM          215      63.8800  D10
+                         TO            215      24.8800  D1
+I8' . . . . . . . . . .  FROM          135     102.3400  D13
+                         TO            215      22.3400  D1
+EI' . . . . . . . . . .  FROM     182.6200     228.9600  D11
+                         TO       142.6200     227.4200  D5
+I6' . . . . . . . . . .  FROM          215     144.8800  D8
+                         TO       142.6200     109.9600  D13
+I6' . . . . . . . . . .  FROM          215     144.8800  D8
+                         TO            215     184.8800  D7
+I5' . . . . . . . . . .  FROM          215      68.9600  D10
+                         TO            175      62.3400  D12
+I5' . . . . . . . . . .  FROM          215      68.9600  D10
+                         TO            215      32.5000  D1
+I5' . . . . . . . . . .  FROM     222.6200     182.3400  D7
+                         TO            215     192.5000  D7
+I5' . . . . . . . . . .  FROM          215     149.9600  D8
+                         TO       222.6200     182.3400  D7
+I4' . . . . . . . . . .  FROM     182.6200      59.8000  D12
+                         TO       222.6200      19.8000  D1
+I3' . . . . . . . . . .  FROM          215      66.4200  D10
+                         TO       222.6200      22.3400  D1
+I3' . . . . . . . . . .  FROM     182.6200      69.9600  D12
+                         TO            215      66.4200  D10
+I2' . . . . . . . . . .  FROM     182.6200      64.8800  D12
+                         TO       222.6200      27.4200  D1
+I6. . . . . . . . . . .  FROM     142.6200      59.8000  D9
+                         TO       142.6200     107.4200  D13
+I6. . . . . . . . . . .  FROM     142.6200      59.8000  D9
+                         TO       142.6200      22.3400  D6
+I5. . . . . . . . . . .  FROM          175      59.8000  D12
+                         TO       142.6200      29.9600  D6
+I4. . . . . . . . . . .  FROM     222.6200     179.8000  D7
+                         TO       182.6200      57.2600  D12
+I4. . . . . . . . . . .  FROM     222.6200     179.8000  D7
+                         TO            215     189.9600  D7
+I3. . . . . . . . . . .  FROM     182.6200      67.4200  D12
+                         TO            215     152.5000  D8
+I2. . . . . . . . . . .  FROM     182.6200      62.3400  D12
+                         TO            215      71.5000  D10
+T5. . . . . . . . . . .  FROM     222.6200     177.2600  D7
+                         TO       182.6200      23.8800  D3
+T6. . . . . . . . . . .  FROM     142.6200      57.2600  D9
+                         TO       182.6200      26.4200  D3
+T7. . . . . . . . . . .  FROM          215     139.8000  D8
+                         TO            135     191.5000  D4
+T8. . . . . . . . . . .  FROM          215     179.8000  D7
+                         TO            135     188.9600  D4
+T10 . . . . . . . . . .  FROM     142.6200      17.2600  D6
+                         TO            175      28.9600  D3
+T4. . . . . . . . . . .  FROM          215      58.8000  D10
+                         TO       182.6200      21.3400  D3
+T9. . . . . . . . . . .  FROM     142.6200      24.8800  D6
+                         TO            175      31.5000  D3
+T11 . . . . . . . . . .  FROM          135      19.8000  D6
+                         TO            175      26.4200  D3
+T12 . . . . . . . . . .  FROM          175      23.8800  D3
+                         TO            135      27.4200  D6
+T12 . . . . . . . . . .  FROM     182.6200      28.9600  D3
+                         TO            175      23.8800  D3
+GND . . . . . . . . . .  FROM          215     177.2600  D7
+                         TO            215     137.2600  D8
+GND . . . . . . . . . .  FROM          215     217.2600  D2
+                         TO            215     177.2600  D7
+GND . . . . . . . . . .  FROM          175     216.2600  D11
+                         TO            215     217.2600  D2
+GND . . . . . . . . . .  FROM          135     176.2600  D4
+                         TO            175     216.2600  D11
+GND . . . . . . . . . .  FROM          135      97.2600  D13
+                         TO            135     176.2600  D4
+GND . . . . . . . . . .  FROM          215      17.2600  D1
+                         TO            215      56.2600  D10
+GND . . . . . . . . . .  FROM          175      16.2600  D3
+                         TO            215      17.2600  D1
+GND . . . . . . . . . .  FROM          175      57.2600  D12
+                         TO            175      16.2600  D3
+GND . . . . . . . . . .  FROM          135      57.2600  D9
+                         TO            135      97.2600  D13
+GND . . . . . . . . . .  FROM          135      57.2600  D9
+                         TO            135      17.2600  D6
+GND . . . . . . . . . .  FROM          175      57.2600  D12
+                         TO            135      57.2600  D9
++5V . . . . . . . . . .  FROM     222.6200     192.5000  D7
+                         TO       222.6200     152.5000  D8
++5V . . . . . . . . . .  FROM     222.6200     232.5000  D2
+                         TO       222.6200     192.5000  D7
++5V . . . . . . . . . .  FROM     182.6200     231.5000  D11
+                         TO       222.6200     232.5000  D2
++5V . . . . . . . . . .  FROM     142.6200     112.5000  D13
+                         TO       142.6200     191.5000  D4
++5V . . . . . . . . . .  FROM     222.6200      32.5000  D1
+                         TO       222.6200      71.5000  D10
++5V . . . . . . . . . .  FROM     182.6200      31.5000  D3
+                         TO       222.6200      32.5000  D1
++5V . . . . . . . . . .  FROM     182.6200      72.5000  D12
+                         TO       182.6200      31.5000  D3
++5V . . . . . . . . . .  FROM     142.6200      72.5000  D9
+                         TO       142.6200     112.5000  D13
++5V . . . . . . . . . .  FROM     142.6200      72.5000  D9
+                         TO       142.6200      32.5000  D6
++5V . . . . . . . . . .  FROM     182.6200      72.5000  D12
+                         TO       142.6200      72.5000  D9
+
+Disconnect Count = 66
+
+End Time:   11/27/1997  17:55:11 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD PAD BUILDER UTILITY REPORT   VERSION V8.5
+
+Start Time:   11/27/1997  17:55:24 
+
+Database:     k155iv1.plc
+Old strategy: k155iv1.ctl
+Pad builder utility was halted by user.
+
+End Time:   11/27/1997  17:55:35 
+
+END OF P-CAD PAD BUILDER UTILITY REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/28/1997  19:02:00 
+Design:     k155iv1
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    78              Pins:   406
+
+Disk file space needed:  18.95 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 18.66 Mbytes
+                          and 2761 x 1406 grids x 2 layers)
+   Optimum setup:  153.39 Mbytes
+      Good setup:   77.43 Mbytes
+      Fair setup:   34.46 Mbytes
+
+
+Elapsed Time:      0:00:03 
+
+End Time:   11/28/1997  19:02:04 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/28/1997  19:02:07 
+Design:     k155iv1
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:             DAISY        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:       0   Initial Vias:      0     0.0%
+
+ 
+Map Builder  start: 19:02:09   0:00:05 elapsed            Size: 16.94 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       2     2  19:02:15   0:00:00      40       0     2.5%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      76    71  19:02:15   0:09:01    2527      63    93.5%
+ 
+              Maze Router Pass 2 - DEFAULT wiring rule
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       3     2  19:11:17   0:02:57    2610      67    96.1%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    78              Pins:   406
+
+Routed Subnets:         75                  Disconnects:          3
+Completion Rate:      96.1%                                             
+Total Metal:          2610                  Elapsed Time:   0:12:16
+Total Vias:             67
+
+ 
+End Time:   11/28/1997  19:14:23 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/28/1997  19:29:28 
+Design:     k155iv1
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    78              Pins:   406
+
+Disk file space needed:  6.73 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.67 Mbytes
+
+
+Elapsed Time:      0:00:03 
+
+End Time:   11/28/1997  19:29:32 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/28/1997  19:29:35 
+Design:     k155iv1
+Database:   k155iv1.plc
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:       0   Initial Vias:      0     0.0%
+
+ 
+Map Builder  start: 19:29:37   0:00:05 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       1     1  19:29:42   0:00:00      45       0     1.2%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      77    76  19:29:43   0:06:46    2158      63    98.7%
+ 
+              Maze Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       1     1  19:36:29   0:06:18    2225      64    100%
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule      Via cost:  100
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      78     0  19:42:47   0:01:41    2228      44    100%
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule      Via cost:  110
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      78     0  19:44:29   0:01:29    2225      42    100%
+ 
+              Optimizer Pass 3 - DEFAULT wiring rule      Via cost:  120
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      78     0  19:45:59   0:01:40    2227      41    100%
+ 
+              Optimizer Pass 4 - DEFAULT wiring rule      Via cost:  130
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      78     0  19:47:40   0:01:51    2222      39    100%
+ 
+              Via Minimizer - DEFAULT wiring rule
+Layers  Eliminated     Start   Elapsed            Vias
+ 1-2             2  19:49:32   0:00:05              37
+ 
+              Beveler Post Process - DEFAULT wiring rule  Size: NO LIMIT
+              Arc Beveler Post Process - DEFAULT wiring rule
+Layers     Beveled     Start   Elapsed   Metal
+ 1-2            49  19:49:37   0:00:05    2203
+ 
+              Jog Elimination - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias
+ 1-2     156     6  19:49:43   0:00:04    2202      37
+ 
+              Acute Angle Eliminator
+Layers  Eliminated     Start   Elapsed
+ 1-2             3  19:49:47   0:00:00 
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    78              Pins:   406
+
+Routed Subnets:         78                  Disconnects:          0
+Completion Rate:       100%                                             
+Total Metal:          2202                  Elapsed Time:   0:20:13
+Total Vias:             37
+
+ 
+End Time:   11/28/1997  19:49:48 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/28/1997  19:49:51 
+Design:     k155iv1
+Database:   k155iv1.pl1
+Strategy:   k155iv1.ctl
+
+
+Disconnect Count = 0
+
+End Time:   11/28/1997  19:49:52 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/28/1997  20:34:46 
+Design:     k155iv1
+Database:   k155iv1.pl3
+Strategy:   k155iv1.ctl
+
+WARNING   A660 Deleted antenna from (13.6000,49.6000) to (13,49).
+WARNING   A660 Deleted antenna from (18,4) to (35.1000,6.7000).
+WARNING   A660 Deleted antenna from (18,141.5000) to (42.7000,112.1000).
+WARNING   A660 Deleted antenna from (11.2000,52.2000) to (10.5000,51.5000).
+WARNING   A660 Deleted antenna from (13.7000,54.7000) to (13,54).
+WARNING   A660 Deleted antenna from (11.2000,57.2000) to (10.5000,56.5000).
+WARNING   A660 Deleted antenna from (13.7000,59.7000) to (13,59).
+WARNING   A660 Deleted antenna from (11.1000,62.1000) to (10.5000,61.5000).
+WARNING   A660 Deleted antenna from (13.6000,64.6000) to (13,64).
+WARNING   A660 Deleted antenna from (13.7000,24.7000) to (13,24).
+WARNING   A660 Deleted antenna from (11.2000,22.2000) to (10.5000,21.5000).
+WARNING   A660 Deleted antenna from (13.6000,14) to (13,14).
+WARNING   A660 Deleted antenna from (13.7000,44.7000) to (13,44).
+WARNING   A660 Deleted antenna from (11.2000,47.2000) to (10.5000,46.5000).
+WARNING   A640 Database has no subnets to route.
+WARNING   A650 14 antennas, loops, and/or redundant segments were deleted.
+
+Nets:    36                 Subnets:    78              Pins:   182
+
+Disk file space needed:  6.64 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.63 Mbytes
+
+
+Fatal Errors:            0                   Warnings:           16        
+Elapsed Time:      0:00:03 
+
+End Time:   11/28/1997  20:34:50 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/28/1997  20:34:52 
+Design:     k155iv1
+Database:   k155iv1.pl3
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:      78   Initial Vias:     37    100%
+
+ 
+Map Builder  start: 20:34:54   0:00:04 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  20:34:58   0:00:00    2202      37    100%
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule      Via cost:  100
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      40     0  20:34:59   0:01:28    2259      36    100%
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule      Via cost:  110
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      49     0  20:36:28   0:01:46    2284      36    100%
+ 
+              Optimizer Pass 3 - DEFAULT wiring rule      Via cost:  120
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      10     0  20:38:15   0:00:21    2294      36    100%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    78              Pins:   182
+
+Routed Subnets:         78                  Disconnects:          0
+Completion Rate:       100%                                             
+Total Metal:          2294                  Elapsed Time:   0:03:44
+Total Vias:             36
+
+ 
+End Time:   11/28/1997  20:38:37 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/29/1997  20:22:36 
+Design:     k155iv1
+Database:   k155iv1.pl1
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Elapsed Time:      0:00:04 
+
+End Time:   11/29/1997  20:22:41 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/29/1997  20:22:44 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+WARNING    C2170 Unable to find pin at (726200, 93000) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (726200, 169200) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (726200, 169200) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (876200, 194600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (800000, 418400) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (650000, 418400) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (800000, 794600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (726200, 494600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (650000, 118400) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (650000, 194600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (650000, 194600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (876200, 194600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (650000, 418400) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (650000, 194600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (350000, 418400) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (726200, 494600) in net 'UN000061'.
+WARNING    C2170 Unable to find pin at (500000, 93000) in net 'I8'.
+WARNING    C2170 Unable to find pin at (650000, 220000) in net 'I8'.
+WARNING    C2170 Unable to find pin at (650000, 843000) in net 'T2'.
+WARNING    C2170 Unable to find pin at (800000, 1094600) in net 'T2'.
+WARNING    C2170 Unable to find pin at (650000, 1219200) in net 'T2'.
+WARNING    C2170 Unable to find pin at (800000, 1120000) in net 'T1'.
+WARNING    C2170 Unable to find pin at (650000, 1244600) in net 'T1'.
+WARNING    C2170 Unable to find pin at (726200, 817600) in net 'T1'.
+WARNING    C2170 Unable to find pin at (800000, 1120000) in net 'T1'.
+WARNING    C2170 Unable to find pin at (350000, 1120000) in net 'T3'.
+WARNING    C2170 Unable to find pin at (650000, 1270000) in net 'T3'.
+WARNING    C2170 Unable to find pin at (500000, 143800) in net 'I7'.
+WARNING    C2170 Unable to find pin at (650000, 143800) in net 'I7'.
+FATAL      C2210 Net 'I6' missing or out of order in database. 
+End Time:   11/29/1997  20:22:48 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/29/1997  20:24:08 
+Design:     k155iv1
+Database:   k155iv1.pl1
+Strategy:   k155iv1.ctl
+
+FATAL     A170 Strategy file and database have different measurement units.
+
+Fatal Errors:            1                   Warnings:            0        
+Elapsed Time:      0:00:04 
+
+End Time:   11/29/1997  20:24:15 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/29/1997  20:25:16 
+Design:     k155iv1
+Database:   k155iv1.pl1
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Elapsed Time:      0:00:04 
+
+End Time:   11/29/1997  20:25:21 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/29/1997  20:25:25 
+Design:     k155iv1
+Database:   k155iv1.pl1
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:       0   Initial Vias:      0     0.0%
+
+ 
+Map Builder  start: 20:25:27   0:00:05 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       3     2  20:25:33   0:00:00     105       0     2.0%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      94    75  20:25:34   1:24:24    2496      60    80.2%
+ 
+              Maze Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      19     3  21:49:59   0:12:58    2700      66    83.3%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  22:02:59   0:00:08    2700      66    83.3%
+ 
+Map Builder  start: 22:03:07   0:00:08 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule      Via cost:  100
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      80     0  22:03:15   0:04:52    2688      46    83.3%
+ 
+              Ripup Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  22:08:08   0:00:07    2688      46    83.3%
+ 
+Map Builder  start: 22:08:15   0:00:13 elapsed
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule      Via cost:  110
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      80     0  22:08:29   0:03:07    2691      45    83.3%
+ 
+              Ripup Router Pass 3 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  22:11:37   0:00:07    2691      45    83.3%
+ 
+Map Builder  start: 22:11:44   0:00:13 elapsed
+ 
+              Optimizer Pass 3 - DEFAULT wiring rule      Via cost:  120
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      38     0  22:11:58   0:01:32    2696      44    83.3%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         80                  Disconnects:         16
+Completion Rate:      83.3%                                             
+Total Metal:          2696                  Elapsed Time:   1:48:05
+Total Vias:             44
+
+ 
+End Time:   11/29/1997  22:13:31 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/29/1997  22:13:42 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+I7' . . . . . . . . . .  FROM           38      58.4200  D5
+                         TO        10.5000      86.5000  CONNECT
+I8' . . . . . . . . . .  FROM           38      53.3400  D5
+                         TO             13           84  CONNECT
+EI' . . . . . . . . . .  FROM      75.6200     105.9600  D1
+                         TO             13          104  CONNECT
+I6' . . . . . . . . . .  FROM           38      63.5000  D5
+                         TO             13           89  CONNECT
+I5' . . . . . . . . . .  FROM           53      60.9600  D8
+                         TO        10.5000      91.5000  CONNECT
+I4' . . . . . . . . . .  FROM      75.6200      50.8000  D2
+                         TO             13           94  CONNECT
+I3' . . . . . . . . . .  FROM           38      28.4200  D11
+                         TO        10.5000      96.5000  CONNECT
+I2' . . . . . . . . . .  FROM      75.6200      58.4200  D2
+                         TO             13           99  CONNECT
+I1' . . . . . . . . . .  FROM      10.5000     101.5000  CONNECT
+                         TO        75.6200      60.9600  D2
+GS' . . . . . . . . . .  FROM      10.5000      41.5000  CONNECT
+                         TO             83     133.4200  D10
+A0' . . . . . . . . . .  FROM      10.5000      46.5000  CONNECT
+                         TO        60.6200      18.2600  D12
+A1' . . . . . . . . . .  FROM           13           49  CONNECT
+                         TO             38      83.3400  D13
+A2' . . . . . . . . . .  FROM      10.5000      51.5000  CONNECT
+                         TO             53      23.3400  D12
+EO' . . . . . . . . . .  FROM           13           44  CONNECT
+                         TO        75.6200     103.4200  D1
+GND . . . . . . . . . .  FROM           18            4  CONNECT
+                         TO             13            4  CONNECT
++5V . . . . . . . . . .  FROM           18     141.5000  CONNECT
+                         TO             13          139  CONNECT
+
+Disconnect Count = 16
+
+End Time:   11/29/1997  22:13:43 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  13:54:19 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Elapsed Time:      0:00:05 
+
+End Time:   11/30/1997  13:54:25 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  13:54:28 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:             DAISY        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:      80   Initial Vias:     44    83.3%
+
+ 
+Map Builder  start: 13:54:31   0:00:08 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       1     0  13:54:40   0:00:00    2696      44    83.3%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  13:54:40   0:00:00    2696      44    83.3%
+ 
+              Maze Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  13:54:41   0:00:02    2696      44    83.3%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  13:54:43   0:00:00    2696      44    83.3%
+ 
+Map Builder  start: 13:54:44   0:00:08 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule      Via cost:  100
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      69     0  13:54:52   0:02:10    2734      43    83.3%
+ 
+              Ripup Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  13:57:03   0:00:00    2734      43    83.3%
+ 
+Map Builder  start: 13:57:04   0:00:08 elapsed
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule      Via cost:  110
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      78     0  13:57:12   0:02:07    2765      42    83.3%
+ 
+              Ripup Router Pass 3 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  13:59:20   0:00:00    2765      42    83.3%
+ 
+Map Builder  start: 13:59:20   0:00:08 elapsed
+ 
+              Optimizer Pass 3 - DEFAULT wiring rule      Via cost:  120
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  13:59:28   0:00:13    2765      42    83.3%
+ 
+              Ripup Router Pass 4 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  13:59:42   0:00:04    2765      42    83.3%
+ 
+Map Builder  start: 13:59:47   0:00:08 elapsed
+ 
+              Optimizer Pass 4 - DEFAULT wiring rule      Via cost:  130
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  13:59:55   0:00:06    2765      42    83.3%
+ 
+              Via Minimizer - DEFAULT wiring rule
+Layers  Eliminated     Start   Elapsed            Vias
+ 1-2             0  14:00:01   0:00:06              42
+ 
+              Beveler Post Process - DEFAULT wiring rule  Size: NO LIMIT
+              Arc Beveler Post Process - DEFAULT wiring rule
+Layers     Beveled     Start   Elapsed   Metal
+ 1-2            57  14:00:08   0:00:06    2765
+ 
+              Jog Elimination - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias
+ 1-2     160     5  14:00:15   0:00:04    2760      41
+ 
+              Acute Angle Eliminator
+Layers  Eliminated     Start   Elapsed
+ 1-2             2  14:00:20   0:00:00 
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         80                  Disconnects:         16
+Completion Rate:      83.3%                                             
+Total Metal:          2760                  Elapsed Time:   0:05:51
+Total Vias:             41
+
+ 
+End Time:   11/30/1997  14:00:20 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/30/1997  14:00:24 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+I7' . . . . . . . . . .  FROM           38      25.8800  D11
+                         TO        10.5000      86.5000  CONNECT
+I8' . . . . . . . . . .  FROM           13           84  CONNECT
+                         TO             38      53.3400  D5
+EI' . . . . . . . . . .  FROM           83     135.9600  D10
+                         TO             13          104  CONNECT
+I6' . . . . . . . . . .  FROM           53      55.8800  D8
+                         TO             13           89  CONNECT
+I5' . . . . . . . . . .  FROM           38      30.9600  D11
+                         TO        10.5000      91.5000  CONNECT
+I4' . . . . . . . . . .  FROM           13           94  CONNECT
+                         TO        75.6200      50.8000  D2
+I3' . . . . . . . . . .  FROM      10.5000      96.5000  CONNECT
+                         TO             38      28.4200  D11
+I2' . . . . . . . . . .  FROM           13           99  CONNECT
+                         TO        75.6200      58.4200  D2
+I1' . . . . . . . . . .  FROM      75.6200      60.9600  D2
+                         TO        10.5000     101.5000  CONNECT
+GS' . . . . . . . . . .  FROM           83     133.4200  D10
+                         TO        10.5000      41.5000  CONNECT
+A0' . . . . . . . . . .  FROM      60.6200      18.2600  D12
+                         TO        10.5000      46.5000  CONNECT
+A1' . . . . . . . . . .  FROM           38      83.3400  D13
+                         TO             13           49  CONNECT
+A2' . . . . . . . . . .  FROM           53      23.3400  D12
+                         TO        10.5000      51.5000  CONNECT
+EO' . . . . . . . . . .  FROM      75.6200     103.4200  D1
+                         TO             13           44  CONNECT
+GND . . . . . . . . . .  FROM           18            4  CONNECT
+                         TO             13            4  CONNECT
++5V . . . . . . . . . .  FROM           13          139  CONNECT
+                         TO             18     141.5000  CONNECT
+
+Disconnect Count = 16
+
+End Time:   11/30/1997  14:00:25 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  14:06:27 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    97              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  14:06:33 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  14:06:37 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:          MIN-SPAN        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    NorthEast/SouthWest   3     3     1     4
+  2    NorthWest/SouthEast   3     3     4     1
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ NEW3             0.1000          0.1000             0.1000
+ 
+Zero-base subnet count:      80   Initial Vias:     41    82.4%
+
+ 
+Map Builder  start: 14:06:40   0:00:08 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  14:06:49   0:00:00    2761      41    82.4%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      17     1  14:06:49   0:02:39    2863      50    83.5%
+ 
+              Maze Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  14:09:29   0:00:02    2863      50    83.5%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  14:09:31   0:00:02    2863      50    83.5%
+ 
+Map Builder  start: 14:09:33   0:00:08 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule      Via cost:  100
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  14:09:42   0:05:06    2863      50    83.5%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    97              Pins:   406
+
+Routed Subnets:         81                  Disconnects:         16
+Completion Rate:      83.5%                                             
+Total Metal:          2863                  Elapsed Time:   0:08:10
+Total Vias:             50
+
+ 
+End Time:   11/30/1997  14:14:49 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  14:16:11 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    97              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  14:16:17 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  14:22:29 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  14:22:35 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  14:22:38 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ 
+Zero-base subnet count:      80   Initial Vias:     41    83.3%
+
+ 
+Map Builder  start: 14:22:42   0:00:08 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       2     0  14:22:50   0:00:00    2761      41    83.3%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     6  14:22:51   0:10:59    3194      51    89.5%
+ 
+              Maze Router Pass 2 - DEFAULT wiring rule
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       8     5  14:33:51   4:07:24    3566      59    94.7%
+ 
+NORMAL    B505  Router was halted by user.                       
+
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         91                  Disconnects:          5
+Completion Rate:      94.7%                                             
+Total Metal:          3566                  Elapsed Time:   4:19:10
+Total Vias:             59
+
+ 
+End Time:   11/30/1997  18:41:49 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/30/1997  18:41:59 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+I4' . . . . . . . . . .  FROM      75.6200      50.8000  D2
+                         TO             18           94  CONNECT
+I2' . . . . . . . . . .  FROM      75.6200      58.4200  D2
+                         TO             18           99  CONNECT
+EO' . . . . . . . . . .  FROM           18           44  CONNECT
+                         TO        75.6200     103.4200  D1
++5V . . . . . . . . . .  FROM      15.5000     141.5000  CONNECT
+                         TO             13     141.5000  CONNECT
++5V . . . . . . . . . .  FROM           18     141.5000  CONNECT
+                         TO        15.5000     141.5000  CONNECT
+
+Disconnect Count = 5
+
+End Time:   11/30/1997  18:42:00 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  18:43:42 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+WARNING   A660 Deleted antenna from (53,55.8500) to (52.9500,55.8000).
+WARNING   A660 Deleted antenna from (38,63.5000) to (52.9500,55.8000).
+WARNING   A660 Deleted antenna from (68,18.2500) to (53.0500,18.2000).
+WARNING   A650 3 antennas, loops, and/or redundant segments were deleted.
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Fatal Errors:            0                   Warnings:            4        
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  18:43:48 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  18:43:52 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:             DAISY        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:             NO        Corner Penalty:             NO
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    NorthWest/SouthEast   3     3     4     1
+  2    NorthEast/SouthWest   3     3     1     4
+ 
+
+Through Via Weight:         20
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:     20
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ 
+Zero-base subnet count:      89   Initial Vias:     58    92.7%
+
+ 
+Map Builder  start: 18:43:55   0:00:09 elapsed            Size: 5.96 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  18:44:05   0:00:00    3529      58    92.7%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       7     2  18:44:05   0:02:06    3620      64    94.7%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       5     0  18:46:11   0:00:04    3620      64    94.7%
+ 
+Map Builder  start: 18:46:16   0:00:09 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule      Via cost:  100
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       3     0  18:46:25   0:04:17    3619      64    94.7%
+ 
+              Ripup Router Pass 2 - DEFAULT wiring rule
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       3     0  18:50:42   0:01:47    3619      64    94.7%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         91                  Disconnects:          5
+Completion Rate:      94.7%                                             
+Total Metal:          3619                  Elapsed Time:   0:08:37
+Total Vias:             64
+
+ 
+End Time:   11/30/1997  18:52:30 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  18:54:46 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+WARNING   A660 Deleted antenna from (53,55.8500) to (52.9500,55.8000).
+WARNING   A660 Deleted antenna from (38,63.5000) to (52.9500,55.8000).
+WARNING   A660 Deleted antenna from (68,18.2500) to (53.0500,18.2000).
+WARNING   A650 3 antennas, loops, and/or redundant segments were deleted.
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Fatal Errors:            0                   Warnings:            4        
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  18:54:53 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  18:54:56 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:             DAISY        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:            YES        Corner Penalty:            YES
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:    100
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ 
+Zero-base subnet count:      89   Initial Vias:     58    92.7%
+
+ 
+Map Builder  start: 18:55:00   0:00:07 elapsed            Size: 4.82 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       2     0  18:55:07   0:00:00    3529      58    92.7%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       7     2  18:55:07   0:02:31    3608      58    94.7%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       5     0  18:57:39   0:00:16    3608      58    94.7%
+ 
+Map Builder  start: 18:57:55   0:00:06 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule                    
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  18:58:02   0:00:07    3608      58    94.7%
+ 
+              Ripup Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       5     0  18:58:10   0:00:05    3608      58    94.7%
+ 
+Map Builder  start: 18:58:15   0:00:06 elapsed
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule                    
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  18:58:22   0:00:06    3608      58    94.7%
+ 
+              Via Minimizer - DEFAULT wiring rule
+Layers  Eliminated     Start   Elapsed            Vias
+ 1-2             0  18:58:29   0:00:05              58
+ 
+              Beveler Post Process - DEFAULT wiring rule  Size: NO LIMIT
+              Arc Beveler Post Process - DEFAULT wiring rule
+Layers     Beveled     Start   Elapsed   Metal
+ 1-2             8  18:58:34   0:00:05    3608
+ 
+              Jog Elimination - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias
+ 1-2     182     5  18:58:40   0:00:05    3607      58
+ 
+              Acute Angle Eliminator
+Layers  Eliminated     Start   Elapsed
+ 1-2             5  18:58:45   0:00:00 
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         91                  Disconnects:          5
+Completion Rate:      94.7%                                             
+Total Metal:          3607                  Elapsed Time:   0:03:49
+Total Vias:             58
+
+ 
+End Time:   11/30/1997  18:58:46 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/30/1997  18:58:50 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+I4' . . . . . . . . . .  FROM           18           94  CONNECT
+                         TO        75.6200      50.8000  D2
+I2' . . . . . . . . . .  FROM           18           99  CONNECT
+                         TO        75.6200      58.4200  D2
+EO' . . . . . . . . . .  FROM      75.6200     103.4200  D1
+                         TO             18           44  CONNECT
++5V . . . . . . . . . .  FROM      15.5000     141.5000  CONNECT
+                         TO             18     141.5000  CONNECT
++5V . . . . . . . . . .  FROM           13     141.5000  CONNECT
+                         TO        15.5000     141.5000  CONNECT
+
+Disconnect Count = 5
+
+End Time:   11/30/1997  18:58:51 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  19:00:04 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+WARNING   A660 Deleted antenna from (75.8000,28.5000) to (76.6000,28.5000).
+WARNING   A660 Deleted antenna from (68.0500,105.9000) to (68,105.9500).
+WARNING   A660 Deleted antenna from (68.0500,105.9000) to (83,103.4200).
+WARNING   A660 Deleted antenna from (38,18.2500) to (37.9500,18.2000).
+WARNING   A660 Deleted antenna from (18,4.1000) to (37.9500,18.2000).
+WARNING   A660 Deleted antenna from (52.9500,48.3000) to (53,48.2500).
+WARNING   A660 Deleted antenna from (38,48.2500) to (52.9500,48.3000).
+WARNING   A660 Deleted antenna from (67.9500,48.2000) to (53.0500,48.2000).
+WARNING   A650 8 antennas, loops, and/or redundant segments were deleted.
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Fatal Errors:            0                   Warnings:            9        
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  19:00:10 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  19:00:14 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:          MIN-SPAN        Component Orientation:    NONE
+Route Order:       SHORT-LONG        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:            YES        Corner Penalty:            YES
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:    100
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ 
+Zero-base subnet count:      85   Initial Vias:     57    88.5%
+
+ 
+Map Builder  start: 19:00:17   0:00:07 elapsed            Size: 4.82 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       2     0  19:00:25   0:00:00    3525      57    88.5%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      11     5  19:00:25   0:00:38    3618      57    93.7%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       6     0  19:01:04   0:04:43    3618      57    93.7%
+ 
+Map Builder  start: 19:05:47   0:00:06 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule                    
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  19:05:54   0:00:05    3618      57    93.7%
+ 
+              Ripup Router Pass 2 - DEFAULT wiring rule
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       3     0  19:06:00   0:00:06    3618      57    93.7%
+ 
+Map Builder  start: 19:06:06   0:00:06 elapsed
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule                    
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       0     0  19:06:13   0:00:03    3618      57    93.7%
+ 
+              Via Minimizer - DEFAULT wiring rule
+Layers  Eliminated     Start   Elapsed            Vias
+ 1-2             0  19:06:17   0:00:05              57
+ 
+              Beveler Post Process - DEFAULT wiring rule  Size: NO LIMIT
+              Arc Beveler Post Process - DEFAULT wiring rule
+Layers     Beveled     Start   Elapsed   Metal
+ 1-2             7  19:06:23   0:00:05    3618
+ 
+              Jog Elimination - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias
+ 1-2     180     6  19:06:29   0:00:05    3618      57
+ 
+              Acute Angle Eliminator
+Layers  Eliminated     Start   Elapsed
+ 1-2             4  19:06:34   0:00:00 
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         90                  Disconnects:          6
+Completion Rate:      93.7%                                             
+Total Metal:          3618                  Elapsed Time:   0:06:20
+Total Vias:             57
+
+ 
+End Time:   11/30/1997  19:06:35 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/30/1997  19:06:39 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+I4' . . . . . . . . . .  FROM           18           94  CONNECT
+                         TO        75.6200      50.8000  D2
+I3' . . . . . . . . . .  FROM           38      28.4200  D11
+                         TO        75.6200      53.3400  D2
+I2' . . . . . . . . . .  FROM           18           99  CONNECT
+                         TO        75.6200      58.4200  D2
+EO' . . . . . . . . . .  FROM           18           44  CONNECT
+                         TO        75.6200     103.4200  D1
++5V . . . . . . . . . .  FROM      15.5000     141.5000  CONNECT
+                         TO             13     141.5000  CONNECT
++5V . . . . . . . . . .  FROM      15.5000     141.5000  CONNECT
+                         TO             18     141.5000  CONNECT
+
+Disconnect Count = 6
+
+End Time:   11/30/1997  19:06:40 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  19:07:30 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+
+WARNING   A660 Deleted antenna from (68,53.3500) to (38.0500,53.3000).
+WARNING   A651 One antenna, loop, or redundant segment was deleted.
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Fatal Errors:            0                   Warnings:            2        
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  19:07:36 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  19:07:40 
+Design:     k155iv1
+Database:   k155iv1.plo
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:           STEINER        Component Orientation:    NONE
+Route Order:       LONG-SHORT        Route Distribution: ALL LAYERS
+Bevel During Route:       YES
+Trace Hugging:            YES        Corner Penalty:            YES
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Interstitial Via Weight:    20
+Cost to rip up one grid:   100
+Cost to reuse one grid:    100
+Optimization via weight:   100
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ 
+Zero-base subnet count:      90   Initial Vias:     57    93.7%
+
+ 
+Map Builder  start: 19:07:43   0:00:07 elapsed            Size: 4.82 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       2     0  19:07:50   0:00:00    3587      57    93.7%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       6     2  19:07:51   0:07:51    3752      57    95.8%
+ 
+              Ripup Router Pass 1 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      16     0  19:15:42   0:08:32    3752      57    95.8%
+ 
+Map Builder  start: 19:24:14   0:00:07 elapsed
+ 
+              Optimizer Pass 1 - DEFAULT wiring rule                    
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      23     0  19:24:21   0:10:24    3818      49    95.8%
+ 
+              Ripup Router Pass 2 - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      10     0  19:34:46   0:10:51    3818      49    95.8%
+ 
+Map Builder  start: 19:45:38   0:00:07 elapsed
+ 
+              Optimizer Pass 2 - DEFAULT wiring rule                    
+ 
+NORMAL    B520  Pass was halted by user.                         
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2      11     0  19:45:45   0:10:25    3941      44    95.8%
+ 
+              Via Minimizer - DEFAULT wiring rule
+Layers  Eliminated     Start   Elapsed            Vias
+ 1-2             0  19:56:10   0:00:05              44
+ 
+              Beveler Post Process - DEFAULT wiring rule  Size: NO LIMIT
+              Arc Beveler Post Process - DEFAULT wiring rule
+Layers     Beveled     Start   Elapsed   Metal
+ 1-2             6  19:56:16   0:00:06    3941
+ 
+              Jog Elimination - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias
+ 1-2     184    20  19:56:23   0:00:07    3881      44
+ 
+              Acute Angle Eliminator
+Layers  Eliminated     Start   Elapsed
+ 1-2             4  19:56:30   0:00:00 
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         92                  Disconnects:          4
+Completion Rate:      95.8%                                             
+Total Metal:          3881                  Elapsed Time:   0:48:51
+Total Vias:             44
+
+ 
+End Time:   11/30/1997  19:56:31 
+
+END OF P-CAD ROUTER REPORT
+
+
+
+P-CAD ROUTE RETURNER REPORT    VERSION V8.5
+
+Start Time: 11/30/1997  19:56:35 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+
+*                             Disconnects
+
+Net                           X-Coordinate Y-Coordinate Component
+
+I4' . . . . . . . . . .  FROM           18           94  CONNECT
+                         TO        75.6200      50.8000  D2
+EO' . . . . . . . . . .  FROM           18           44  CONNECT
+                         TO        75.6200     103.4200  D1
++5V . . . . . . . . . .  FROM      15.5000     141.5000  CONNECT
+                         TO             13     141.5000  CONNECT
++5V . . . . . . . . . .  FROM      15.5000     141.5000  CONNECT
+                         TO             18     141.5000  CONNECT
+
+Disconnect Count = 4
+
+End Time:   11/30/1997  19:56:36 
+
+END OF P-CAD ROUTE RETURNER REPORT
+
+
+P-CAD PAD BUILDER UTILITY REPORT   VERSION V8.5
+
+Start Time:   11/30/1997  20:00:52 
+
+Database:     k155iv1.plq
+Old strategy: k155iv1.ctl
+Pad builder utility was halted by user.
+
+End Time:   11/30/1997  20:00:58 
+
+END OF P-CAD PAD BUILDER UTILITY REPORT
+
+
+
+P-CAD ROUTE EXTRACT REPORT     VERSION V8.5
+
+Start Time: 11/30/1997  20:01:31 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+
+WARNING   A660 Deleted antenna from (38.0500,53.3000) to (38,53.3500).
+WARNING   A660 Deleted antenna from (37.9500,53.4000) to (38,53.3500).
+WARNING   A660 Deleted antenna from (18,84) to (37.9500,53.4000).
+WARNING   A650 3 antennas, loops, and/or redundant segments were deleted.
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Disk file space needed:  6.76 Mbytes (estimated)
+Estimated memory needed: (based on map size estimate of 6.50 Mbytes
+                          and 961 x 1406 grids x 2 layers)
+   Optimum setup:   54.34 Mbytes
+      Good setup:   27.90 Mbytes
+      Fair setup:   12.69 Mbytes
+
+
+Fatal Errors:            0                   Warnings:            4        
+Elapsed Time:      0:00:06 
+
+End Time:   11/30/1997  20:01:37 
+
+END OF P-CAD ROUTE EXTRACT REPORT
+
+
+
+ 
+
+P-CAD ROUTER REPORT            VERSION V8.5
+
+
+Start Time: 11/30/1997  20:01:40 
+Design:     k155iv1
+Database:   k155iv1.plq
+Strategy:   k155iv1.ctl
+ 
+                             Strategy
+
+Major Routing Grid: 0.1000 x 0.1000  Via Lattice:                NO
+Minor Routing Grids:   0 x  0        Full Board On Last Pass:   YES
+Route Type:    STEINER-MINVIA        Component Orientation:    NONE
+Route Order:       LONG-SHORT        Route Distribution: ALL LAYERS
+Bevel During Route:        NO
+Trace Hugging:            YES        Corner Penalty:            YES
+ 
+                      Routing Costs by Layer
+
+Layer  Preferred Direction  N/S   E/W  NE/SW NW/SE
+
+  1    North/South           1     4     6     6
+  2    East/West             4     1     6     6
+ 
+
+Interstitial Via Weight:    20
+ 
+
+Wiring rules:   Trace width:    Trace to trace:    Trace to pad:
+ DEFAULT          0.1000          0.1000             0.1000
+ K155IV1          0.2000          0.2000             0.2000
+ 
+Zero-base subnet count:      91   Initial Vias:     43    94.7%
+
+ 
+Map Builder  start: 20:01:44   0:00:07 elapsed            Size: 4.82 Mbytes
+ 
+              Memory Router - DEFAULT wiring rule
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       2     0  20:01:51   0:00:00    3819      43    94.7%
+ 
+              Maze Router Pass 1 - DEFAULT wiring rule
+ 
+NORMAL    B505  Router was halted by user.                       
+
+Layers Tried  Done     Start   Elapsed   Metal    Vias    Rate
+ 1-2       1     0  20:01:52   0:00:47    3819      43    94.7%
+ 
+
+                               Summary
+
+Nets:    36                 Subnets:    96              Pins:   406
+
+Routed Subnets:         91                  Disconnects:          5
+Completion Rate:      94.7%                                             
+Total Metal:          3819                  Elapsed Time:   0:00:58
+Total Vias:             43
+
+ 
+End Time:   11/30/1997  20:02:39 
+
+END OF P-CAD ROUTER REPORT
+
+
+

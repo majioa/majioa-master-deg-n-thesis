@@ -1,0 +1,2 @@
+SWAP GATE D5( 5 6)  D5( 9 8)
+SWAP GATE D10( 1 2 3)  D10( 4 5 6)

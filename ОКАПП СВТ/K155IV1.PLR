@@ -1,0 +1,57 @@
+Database file name: k155iv1.pkg
+Date: 11-29-1997
+Beginning placement at 19:26:24
+
+Warning - No clearances defined.
+Warning - No association definitions found.
+
+
+***********************CUT LINES***********************
+VERTICAL       60.5000
+HORIZONTAL     78.5000
+HORIZONTAL     48.5000
+HORIZONTAL     108.5000
+HORIZONTAL     33.5000
+HORIZONTAL     63.5000
+HORIZONTAL     93.5000
+HORIZONTAL     123.5000
+
+
+******************PLACEMENT STATISTICS*****************
+Completed placement at 19:26:25
+Elapsed Time: 00:00:01
+Estimated trace length (mm) = 2725.5551
+Total number of components = 14
+Number of I.C.'s =       13
+Number of Discretes =     0
+Number of Connectors =    1
+Number of equivalent IC's = 25.38
+Board density =  5.32 sq cm per equivalent I.C.
+
+No Errors Detected..............
+
+
+ 2 Warnings Detected............
+
+
+
+*******************PLACED COMPONENTS*******************
+  Name       Part    X coordinate    Y coordinate
+
+D2         155la1          68         63.5000
+D1         155ll50         68         108.5000
+CONNECT    conn224          8         141.5000
+D3         155le1          83         108.5000
+D4         155ln1          83         63.5000
+D6         155li1          68         33.5000
+D7         555li6          68         138.5000
+D9         555li3          83         33.5000
+D10        155ll1          83         138.5000
+D11        155li50         38         33.5000
+D12        155le50         53         33.5000
+D5         155ln1          38         63.5000
+D8         555li6          53         63.5000
+D13        155le50         38         93.5000
+
+
+*******************************************************

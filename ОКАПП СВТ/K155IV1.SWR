@@ -1,0 +1,80 @@
+%*********************************************************************
+%                                                                    *
+%     Program  :   PC-CARDS Version 8.5                              *
+%     Date     :   11/28/97                                          *
+%     Time     :   06:47:22 PM                                       *
+%     File In  :   k155iv1.plc                                       *
+%     Rpt File :   k155iv1.swr                                       *
+%                                                                    *
+%*********************************************************************
+
+PC-CARDS Improvement Started = 06:47:22
+
+
+Improvement Selected = COMPONENT
+
+Wire length = 5445.2531 mm
+Beginning pass 1 wire length = 5445.2531 mm
+No swaps made
+
+Elapsed Time: 00:00:00
+
+PC-CARDS Improvement Completed = 06:47:25
+
+No Errors Detected..............
+
+%*********************************************************************
+%                                                                    *
+%     Program  :   PC-CARDS Version 8.5                              *
+%     Date     :   11/28/97                                          *
+%     Time     :   06:47:35 PM                                       *
+%     File In  :   k155iv1.plc                                       *
+%     Rpt File :   k155iv1.swr                                       *
+%                                                                    *
+%*********************************************************************
+
+PC-CARDS Improvement Started = 06:47:35
+
+
+Improvement Selected = GATE
+
+Wire length = 4361.0135 mm
+Beginning pass 1 wire length = 4361.0135 mm
+Swapped D5-C and D5-D
+Swapped D10-A and D10-B
+
+Beginning pass 2 wire length = 4338.1535 mm
+No swaps made
+
+Final wire length = 4338.1535 mm
+Elapsed Time: 00:00:00
+
+PC-CARDS Improvement Completed = 06:47:39
+
+No Errors Detected..............
+
+%*********************************************************************
+%                                                                    *
+%     Program  :   PC-CARDS Version 8.5                              *
+%     Date     :   11/28/97                                          *
+%     Time     :   06:47:50 PM                                       *
+%     File In  :   k155iv1.plc                                       *
+%     Rpt File :   k155iv1.swr                                       *
+%                                                                    *
+%*********************************************************************
+
+PC-CARDS Improvement Started = 06:47:50
+
+
+Improvement Selected = COMPONENT
+
+Wire length = 5445.2531 mm
+Beginning pass 1 wire length = 5445.2531 mm
+No swaps made
+
+Elapsed Time: 00:00:00
+
+PC-CARDS Improvement Completed = 06:47:53
+
+No Errors Detected..............
+

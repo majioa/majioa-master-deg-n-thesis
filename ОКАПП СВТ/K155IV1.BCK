@@ -1,0 +1,167 @@
+LOAD k155iv1.sch
+SAVE k155iv1.sbk
+LOAD k155iv1.sch
+ASSIGN REFD /G UC000054                D1                          >
+     (                                                    >
+          12                      OUT                     >
+          1                       INA                     >
+          2                       INB                     >
+          13                      INC                     >
+     )
+ASSIGN REFD /G UC000040                D2                          >
+     (                                                    >
+          6                       OUTY                    >
+          1                       INA                     >
+          2                       INB                     >
+          4                       INC                     >
+          5                       IND                     >
+     )
+ASSIGN REFD /G UC000012                D2                          >
+     (                                                    >
+          8                       OUTY                    >
+          13                      INA                     >
+          12                      INB                     >
+          10                      INC                     >
+          9                       IND                     >
+     )
+ASSIGN REFD /G UC000037                D3                          >
+     (                                                    >
+          1                       OUTY                    >
+          2                       INA                     >
+          3                       INB                     >
+     )
+ASSIGN REFD /G UC000039                D4                          >
+     (                                                    >
+          2                       OUT                     >
+          1                       IN                      >
+     )
+ASSIGN REFD /G UC000030                D4                          >
+     (                                                    >
+          4                       OUT                     >
+          3                       IN                      >
+     )
+ASSIGN REFD /G UC000031                D4                          >
+     (                                                    >
+          6                       OUT                     >
+          5                       IN                      >
+     )
+ASSIGN REFD /G UC000032                D4                          >
+     (                                                    >
+          8                       OUT                     >
+          9                       IN                      >
+     )
+ASSIGN REFD /G UC000033                D4                          >
+     (                                                    >
+          10                      OUT                     >
+          11                      IN                      >
+     )
+ASSIGN REFD /G UC000034                D5                          >
+     (                                                    >
+          2                       OUT                     >
+          1                       IN                      >
+     )
+ASSIGN REFD /G UC000035                D5                          >
+     (                                                    >
+          4                       OUT                     >
+          3                       IN                      >
+     )
+ASSIGN REFD /G UC000036                D5                          >
+     (                                                    >
+          6                       OUT                     >
+          5                       IN                      >
+     )
+ASSIGN REFD /G UC000016                D6                          >
+     (                                                    >
+          3                       OUTY                    >
+          1                       INA                     >
+          2                       INB                     >
+     )
+ASSIGN REFD /G UC000017                D6                          >
+     (                                                    >
+          6                       OUTY                    >
+          4                       INA                     >
+          5                       INB                     >
+     )
+ASSIGN REFD /G UC000018                D6                          >
+     (                                                    >
+          8                       OUTY                    >
+          10                      INA                     >
+          9                       INB                     >
+     )
+ASSIGN REFD /G UC000019                D6                          >
+     (                                                    >
+          11                      OUTY                    >
+          13                      INA                     >
+          12                      INB                     >
+     )
+ASSIGN REFD /G UC000022                D7                          >
+     (                                                    >
+          6                       OUTY                    >
+          1                       INA                     >
+          2                       INB                     >
+          4                       INC                     >
+          5                       IND                     >
+     )
+ASSIGN REFD /G UC000023                D8                          >
+     (                                                    >
+          6                       OUTY                    >
+          1                       INA                     >
+          2                       INB                     >
+          4                       INC                     >
+          5                       IND                     >
+     )
+ASSIGN REFD /G UC000026                D7                          >
+     (                                                    >
+          8                       OUTY                    >
+          9                       INA                     >
+          10                      INB                     >
+          12                      INC                     >
+          13                      IND                     >
+     )
+ASSIGN REFD /G UC000024                D9                          >
+     (                                                    >
+          12                      OUTY                    >
+          2                       INA                     >
+          1                       INB                     >
+          13                      INC                     >
+     )
+ASSIGN REFD /G UC000038                D10                         >
+     (                                                    >
+          3                       OUTY                    >
+          1                       INA                     >
+          2                       INB                     >
+     )
+ASSIGN REFD /G UC000055                D11                         >
+     (                                                    >
+          6                       OUT                     >
+          1                       INA                     >
+          2                       INB                     >
+          3                       INC                     >
+          4                       IND                     >
+          5                       INE                     >
+     )
+ASSIGN REFD /G UC000058                D12                         >
+     (                                                    >
+          5                       OUT                     >
+          1                       INA                     >
+          2                       INB                     >
+          3                       INC                     >
+          4                       IND                     >
+     )
+ASSIGN REFD /G UC000057                D13                         >
+     (                                                    >
+          5                       OUT                     >
+          1                       INA                     >
+          2                       INB                     >
+          3                       INC                     >
+          4                       IND                     >
+     )
+ASSIGN REFD /G UC000056                D12                         >
+     (                                                    >
+          8                       OUT                     >
+          10                      INA                     >
+          11                      INB                     >
+          12                      INC                     >
+          13                      IND                     >
+     )
+SAVE k155iv1.sch
